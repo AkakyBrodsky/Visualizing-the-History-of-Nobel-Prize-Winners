@@ -43,7 +43,7 @@ max = female['female'].idxmax()
 
 print(max)
 
-max_female_dict = dict({female['decades'].values[max]:female['female'].values[max]})
+max_female_dict = dict({female['decades'].values[max]:female['category'].values[max]})
 print(max_female_dict)
 
 #Who was the first woman to receive a Nobel Prize, and in what category?
@@ -58,5 +58,5 @@ print(first_woman_category)
 
 #Which individuals or organizations have won more than one Nobel Prize throughout the years?
 counts = df.value_counts('full_name')
-repeated_list = counts[counts>=2].index
+repeat_list = list(counts[counts>=2].index)
 print(repeated_list)
